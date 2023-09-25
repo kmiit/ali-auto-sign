@@ -123,6 +123,7 @@ runs:
     - name: Run
       shell: bash
       run: |
+        ls
         cd ali-auto-sign
         ls
         cd $(ls -dt */|head -1 )
