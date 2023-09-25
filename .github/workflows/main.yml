@@ -10,7 +10,7 @@ jobs:
     name: Aliyun Signin
     runs-on: ubuntu-latest
     steps:
-      - uses: 12189108/aliyun-auto-signin3@main
+      - uses: kmiit/ali-auto-signmain
         with:
           REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
           GP_TOKEN: ${{ secrets.GP_TOKEN}}
