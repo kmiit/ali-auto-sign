@@ -120,17 +120,11 @@ runs:
         repository: kmiit/ali-auto-sign
         excludes: prerelease, draft
         token: ${{ inputs.GP_TOKEN }}
-    - name: Download
-      shell: bash
-      run: |
-        wget https://github.com/kmiit/ali-auto-sign/archive/refs/tags/${{ steps.version.outputs.release }}.zip -O release.zip
-        rm -rf release
-        unzip release.zip -d release
-        rm release.zip
     - name: Run
       shell: bash
       run: |
-        cd release
+        cd ali-auto-sign
+        ls
         cd $(ls -dt */|head -1 )
         pip install -r requirements.txt
         python app.py -a
